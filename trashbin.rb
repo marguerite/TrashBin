@@ -14,11 +14,11 @@ $trash_args = []
 
 $*.each do |arg|
 	unless arg.include?"-" then
-		$trash_candidates << argc
+		$trash_candidates << arg
 	end
 	
 	if arg.include?"-" then
-		$trash_args << argc
+		$trash_args << arg
 	end
 
 	case arg
