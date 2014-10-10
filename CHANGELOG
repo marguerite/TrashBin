@@ -1,0 +1,5 @@
+2014-10-10 23:08
+ * BUG#1: arg.include?"-" detects "inclusion" instead of "prefix",
+	so many files like xxx-xxx.x86_64.rpm can't be deleted.
+2014-10-11 05:51
+ * Solved BUG#1

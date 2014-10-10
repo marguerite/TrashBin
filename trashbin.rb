@@ -7,17 +7,19 @@
 # * detect same name in trash bin
 # * raise permission errors
 # * allow to trash Windows/Remote files/directories
+# * support "*" in names 
+# * can delete file without prefix path
 
 VERSION = 1.0
 $trash_candidates = []
 $trash_args = []
 
 $*.each do |arg|
-	unless arg.include?"-" then
+	unless arg[0] == "-" then
 		$trash_candidates << arg
 	end
 	
-	if arg.include?"-" then
+	if arg[0] == "-" then
 		$trash_args << arg
 	end
 
